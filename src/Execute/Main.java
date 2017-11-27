@@ -13,9 +13,10 @@ import Page.*;
 
 public class Main {
 
-    private static String targetSite = "http://automationpractice.com";
-    public static WebDriver driver = new ChromeDriver();
-    //Execute-account credentials
+    private static String targetSite = "http://automationpractice.com"; //Site to test
+    public static WebDriver driver = new ChromeDriver(); //Browser to perform
+    private static String product = "Blouse"; //Product to search
+    //account credentials
     private static String username = "piotrryszewski@gmail.com";
     private static String password = "dupajasiu";
 
@@ -27,6 +28,10 @@ public class Main {
         Tests.LoginPage.checkTittle();
         Page.LoginPage.backToMain();
         Tests.MainPage.checkTittle();
+        Page.MainPage.womenCategory();
+        Tests.WomenCategory.checkTittle();
+        Page.WomenCategory.getProductByName(product);
+        Tests.Product.checkTittle(product);
         tearDown();
     }
 
