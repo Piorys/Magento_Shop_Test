@@ -1,6 +1,7 @@
 package Page;
 
 import Execute.Main;
+import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,7 +11,7 @@ public class OrderAddress {
         //Log
         System.out.println("Proceeding to add new address");
         //Page Elements
-        WebElement btn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/div/p/a"));
+        WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/div/p/a"));
         //Action
         btn.click();
     }
@@ -19,7 +20,7 @@ public class OrderAddress {
         //Log
         System.out.println("Adding comment to order: " + comment);
         //Page Elements
-        WebElement textArea = Main.driver.findElement(By.xpath("//*[@id=\"ordermsg\"]/textarea"));
+        WebElement textArea = Setup.driver.findElement(By.xpath("//*[@id=\"ordermsg\"]/textarea"));
         //Action
         textArea.sendKeys(comment);
     }
@@ -28,14 +29,14 @@ public class OrderAddress {
         //Log
         System.out.println("Going back to shopping");
         //Page element
-        WebElement continueBtn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/a"));
+        WebElement continueBtn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/a"));
         //Action
         continueBtn.click();
     }
 
     public static void proceed() {
         //Page element
-        WebElement proceedBtn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/button"));
+        WebElement proceedBtn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/button"));
         //Log
         System.out.println("Proceeding with checkout");
         //Action

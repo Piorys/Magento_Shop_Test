@@ -1,6 +1,7 @@
 package Page;
 
 import Execute.Main;
+import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,9 +11,9 @@ public class LoginPage {
 
     public static void login(String username, String password){
         //Page Elements
-        WebElement loginInput = Main.driver.findElement(By.id("email"));
-        WebElement passwordInput = Main.driver.findElement(By.id("passwd"));
-        WebElement signInBtn = Main.driver.findElement(By.id("SubmitLogin"));
+        WebElement loginInput = Setup.driver.findElement(By.id("email"));
+        WebElement passwordInput = Setup.driver.findElement(By.id("passwd"));
+        WebElement signInBtn = Setup.driver.findElement(By.id("SubmitLogin"));
         //Actions
         System.out.println("Passing username: " + username);
         loginInput.sendKeys(username);
@@ -24,7 +25,7 @@ public class LoginPage {
     }
 
     public static void backToMain(){
-        WebElement logo = Main.driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
+        WebElement logo = Setup.driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
         System.out.println("Going back to Main Page");
         logo.click();
     }

@@ -1,6 +1,7 @@
 package Page;
 
 import Execute.Main;
+import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -9,7 +10,7 @@ public class WomenCategory {
         //Log
         System.out.println("Getting product: " + product);
         //Page element
-        WebElement productBtn = Main.driver.findElement(By.partialLinkText(product));
+        WebElement productBtn = Setup.driver.findElement(By.partialLinkText(product));
         //Action
         try {
             productBtn.click();

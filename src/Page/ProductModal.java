@@ -1,6 +1,7 @@
 package Page;
 
 import Execute.Main;
+import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import sun.awt.windows.WEmbeddedFrame;
@@ -11,8 +12,8 @@ public class ProductModal {
         //Log
         System.out.println("Proceeding to checkout");
         //Page elements
-        Main.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        WebElement proceedBtn = Main.driver.findElement(By.partialLinkText("Proceed"));
+        Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement proceedBtn = Setup.driver.findElement(By.partialLinkText("Proceed"));
         //Action
         proceedBtn.click();
     }
@@ -21,8 +22,8 @@ public class ProductModal {
         //Log
         System.out.println("Going back to product page");
         //Page elements
-        Main.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        WebElement continueBtn = Main.driver.findElement(By.partialLinkText("Continue"));
+        Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement continueBtn = Setup.driver.findElement(By.partialLinkText("Continue"));
         //Action
         continueBtn.click();
     }

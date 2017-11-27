@@ -1,12 +1,13 @@
 package Tests;
 
 import Execute.Main;
+import Execute.Setup;
 
 import static junit.framework.TestCase.assertEquals;
 
 public class Order {
     public static void checkTittle() {
-        String pageTittle = Main.driver.getTitle();
+        String pageTittle = Setup.driver.getTitle();
         System.out.println("Asserting page tittle");
         System.out.println("Expected: Order - My Store, found: " + pageTittle);
         try {
