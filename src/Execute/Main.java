@@ -25,6 +25,16 @@ public class Main {
 
 
     public static void main(String[] args) {
+        startCriticalPathTest();
+    }
+
+
+    //Critical Path
+    //Step 1 - Login
+    //Step 2 - Choose product
+    //Step 3 - Go through ordering process
+
+    public static void startCriticalPathTest(){
         setUp(targetSite);
         MainPage.goToLogin();
         Page.LoginPage.login(username,password);
@@ -35,7 +45,7 @@ public class Main {
         Tests.WomenCategory.checkTittle();
         Page.WomenCategory.getProductByName(product);
         Tests.Product.checkTittle(product);
-        Page.Product.setQuantity("2");
+        Page.Product.setQuantity(quantity);
 //        Page.Product.setSize("M");
         Page.Product.addToCart();
         Page.ProductModal.proceedToCheckout();
@@ -49,7 +59,7 @@ public class Main {
         Page.OrderShipping.proceed();
         Page.OrderPayment.printOrderSummary();
         Page.OrderPayment.payByBankWire();
-        Page.OrderPaymentConfirm.summary();
+        Page.OrderPaymentConfirm.printSummary();
         Page.OrderPaymentConfirm.confirmOrder();
         Tests.OrderConfirmation.checkTittle();
         Page.OrderConfirmation.backToMain();
@@ -57,10 +67,10 @@ public class Main {
         tearDown();
     }
 
-
     public static void setUp(String target){
         System.out.println("Opening up designated page: " + targetSite);
         driver.get(target);
+        System.out.println("Maximizing window");
         driver.manage().window().maximize();
     }
 

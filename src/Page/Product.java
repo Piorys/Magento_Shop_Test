@@ -12,6 +12,7 @@ public class Product {
         //Page element
         WebElement quantityInput = Main.driver.findElement(By.id("quantity_wanted"));
         //Action
+        quantityInput.clear();
         quantityInput.sendKeys(quantity);
     }
     //TODO - CANT FIND DESIRED SIZE
