@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 public class Product {
     public static void setQuantity(String quantity) {
         //Log
-        System.out.println("Setting quantity for product to: " + quantity);
+        System.out.println(Setup.time() + "Setting quantity for product to: " + quantity);
         //Page element
         WebElement quantityInput = Setup.driver.findElement(By.id("quantity_wanted"));
         //Action
@@ -19,7 +19,7 @@ public class Product {
     //TODO - CANT FIND DESIRED SIZE
     public static void setSize(String size) {
         //Log
-        System.out.println("Setting size for product to: " + size);
+        System.out.println(Setup.time() + "Setting size for product to: " + size);
         //Page element
         Select sizeDropdown = new Select(Setup.driver.findElement(By.id("group_1")));
         //Action
@@ -28,7 +28,7 @@ public class Product {
 
     public static void addToCart() {
         //Log
-        System.out.println("Adding product to cart");
+        System.out.println(Setup.time() + "Adding product to cart");
         //Page element
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"add_to_cart\"]/button"));
         //Action

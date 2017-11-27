@@ -3,6 +3,9 @@ package Execute;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Setup {
 
     //Main Settings
@@ -28,6 +31,13 @@ public class Setup {
     public static void tearDown() {
         System.out.println("Instructions ended, tearing down page");
         driver.quit();
+    }
+
+    public static String time() {
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+        Date now = new Date();
+        String strDate = sdfDate.format(now);
+        return strDate + " ";
     }
 }
 

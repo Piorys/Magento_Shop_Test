@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 public class Order {
     public static void checkTittle() {
         String pageTittle = Setup.driver.getTitle();
-        System.out.println("Asserting page tittle");
+        System.out.println(Setup.time() + "Asserting page tittle");
         System.out.println("Expected: Order - My Store, found: " + pageTittle);
         try {
             assertEquals("Order - My Store", pageTittle);

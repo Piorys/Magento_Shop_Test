@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class OrderPayment {
     public static void payByBankWire() {
         //Log
-        System.out.println("Choosing Pay by bank wire option");
+        System.out.println(Setup.time() + "Choosing Pay by bank wire option");
         //Page Element
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"HOOK_PAYMENT\"]/div[1]/div/p/a"));
         //Action
@@ -16,7 +16,7 @@ public class OrderPayment {
 
     public static void payByCheck() {
         //Log
-        System.out.println("Choosing Pay by check option");
+        System.out.println(Setup.time() + "Choosing Pay by check option");
         //Page Element
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"HOOK_PAYMENT\"]/div[2]/div/p/a"));
         //Action
@@ -26,7 +26,7 @@ public class OrderPayment {
     //TODO - CANT LOCATE PRICE WITHOUT TAX
     public static void printOrderSummary() {
         //Log
-        System.out.println("Getting order price..");
+        System.out.println(Setup.time() + "Getting order price..");
         //Page Element
         WebElement products = Setup.driver.findElement(By.id("total_product"));
         WebElement shipping = Setup.driver.findElement(By.id("total_shipping"));
@@ -34,7 +34,7 @@ public class OrderPayment {
         WebElement tax = Setup.driver.findElement(By.id("total_tax"));
         WebElement totalWithTax = Setup.driver.findElement(By.id("total_price"));
         //Action
-        System.out.println("Order summary: \n Total Products: " + products.getText() +
+        System.out.println(Setup.time() + "Order summary: \n Total Products: " + products.getText() +
                 "\n Total Shipping: " + shipping.getText() +
 //                "\n Total without Tax: " + totalWithoutTax.getText() +
                 "\n Tax: " + tax.getText() +
@@ -43,7 +43,7 @@ public class OrderPayment {
 
     public static void continueShopping() {
         //Log
-        System.out.println("Going back to shopping");
+        System.out.println(Setup.time() + "Going back to shopping");
         //Page element
         WebElement continueBtn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/p/a"));
         //Action

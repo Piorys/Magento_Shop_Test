@@ -8,7 +8,7 @@ public class OrderPaymentConfirm {
 
     public static void backToMethods() {
         //Log
-        System.out.println("Going back to payment methods");
+        System.out.println(Setup.time() + "Going back to payment methods");
         //Page element
         WebElement continueBtn = Setup.driver.findElement(By.xpath("//*[@id=\"cart_navigation\"]/a"));
         //Action
@@ -17,7 +17,7 @@ public class OrderPaymentConfirm {
 
     public static void confirmOrder() {
         //Log
-        System.out.println("Confirming order");
+        System.out.println(Setup.time() + "Confirming order");
         //Page Element
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"cart_navigation\"]/button"));
         //Action
@@ -26,11 +26,11 @@ public class OrderPaymentConfirm {
 
     public static void printSummary() {
         //Log
-        System.out.println("Getting order Summary");
+        System.out.println(Setup.time() + "Getting order Summary");
         //Page Element
         WebElement amount = Setup.driver.findElement(By.id("amount"));
         //Action
-        System.out.println("Order total (tax included) is: " + amount.getText());
+        System.out.println(Setup.time() + "Order total (tax included) is: " + amount.getText());
     }
 
 }

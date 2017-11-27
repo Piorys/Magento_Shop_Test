@@ -8,13 +8,13 @@ public class OrderConfirmation {
 
     public static void printSummary() {
         //Log
-        System.out.println("Getting Final Order Summary..");
+        System.out.println(Setup.time() + "Getting Final Order Summary..");
         //Page Elements
         WebElement price = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/span/strong"));
         WebElement ownerName = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/strong[1]"));
         WebElement bankName = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/strong[3]"));
         //Action
-        System.out.println("Order Complete");
+        System.out.println(Setup.time() + "Order Complete");
         System.out.println("Amount: " + price.getText());
         System.out.println("Owner Name: " + ownerName.getText());
         System.out.println("Bank Name: " + bankName.getText());
@@ -22,7 +22,7 @@ public class OrderConfirmation {
 
     public static void backToOrders() {
         //Log
-        System.out.println("Going back to orders");
+        System.out.println(Setup.time() + "Going back to orders");
         //Page Elements
         WebElement back = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/p/a"));
         //Action
@@ -31,7 +31,7 @@ public class OrderConfirmation {
 
     public static void backToMain() {
         //Log
-        System.out.println("Going back to Main Page..");
+        System.out.println(Setup.time() + "Going back to Main Page..");
         //Page Elements
         WebElement logo = Setup.driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
         //Action

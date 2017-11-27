@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class ProductModal {
     public static void proceedToCheckout() {
         //Log
-        System.out.println("Proceeding to checkout");
+        System.out.println(Setup.time() + "Proceeding to checkout");
         //Page elements
         Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement proceedBtn = Setup.driver.findElement(By.partialLinkText("Proceed"));
@@ -19,7 +19,7 @@ public class ProductModal {
 
     public static void continueShoppping() {
         //Log
-        System.out.println("Going back to product page");
+        System.out.println(Setup.time() + "Going back to product page");
         //Page elements
         Setup.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement continueBtn = Setup.driver.findElement(By.partialLinkText("Continue"));

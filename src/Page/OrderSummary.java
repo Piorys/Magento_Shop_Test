@@ -27,7 +27,7 @@ public class OrderSummary {
     // TODO - CANT FIND QUANTITY FIELD
     public static void setQuantity(String quantity) {
         //Log
-        System.out.println("Setting quantity to: " + quantity);
+        System.out.println(Setup.time() + "Setting quantity to: " + quantity);
         //Page Element
         WebElement qtyField = Setup.driver.findElement(By.xpath("//*[@id=\"product_2_9_0_30216\"]/td[5]/input[2]"));
         //Action
@@ -36,7 +36,7 @@ public class OrderSummary {
 
     public static void printOrderSummary() {
         //Log
-        System.out.println("Getting order price..");
+        System.out.println(Setup.time() + "Getting order price..");
         //Page Element
         WebElement products = Setup.driver.findElement(By.id("total_product"));
         WebElement shipping = Setup.driver.findElement(By.id("total_shipping"));
@@ -44,7 +44,7 @@ public class OrderSummary {
         WebElement tax = Setup.driver.findElement(By.id("total_tax"));
         WebElement totalWithTax = Setup.driver.findElement(By.id("total_price"));
         //Action
-        System.out.println("Order summary: \n Total Products: " + products.getText() +
+        System.out.println(Setup.time() + "Order summary: \n Total Products: " + products.getText() +
                 "\n Total Shipping: " + shipping.getText() +
                 "\n Total without Tax: " + totalWithoutTax.getText() +
                 "\n Tax: " + tax.getText() +

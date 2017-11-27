@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 public class LoginPage {
     public static void checkTittle() {
         String pageTittle = Setup.driver.getTitle();
-        System.out.println("Asserting page tittle");
+        System.out.println(Setup.time() + "Asserting page tittle");
         System.out.println("Expected: My account - My Store, found: " + pageTittle);
         try {
             assertEquals("My account - My Store", pageTittle);
