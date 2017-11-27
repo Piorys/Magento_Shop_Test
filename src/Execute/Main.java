@@ -32,6 +32,9 @@ public class Main {
         Tests.WomenCategory.checkTittle();
         Page.WomenCategory.getProductByName(product);
         Tests.Product.checkTittle(product);
+        Page.Product.setQuantity("2");
+        Page.Product.setSize("M");
+        Page.Product.addToCart();
         tearDown();
     }
 
