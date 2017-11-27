@@ -24,13 +24,13 @@ public class OrderPaymentConfirm {
         btn.click();
     }
 
-    public static String summary(){
+    public static void printSummary(){
         //Log
         System.out.println("Getting order Summary");
         //Page Element
         WebElement amount = Main.driver.findElement(By.id("amount"));
         //Action
-        return "Order total (tax included) is: " + amount;
+        System.out.println("Order total (tax included) is: " + amount.getText());
     }
 
 }

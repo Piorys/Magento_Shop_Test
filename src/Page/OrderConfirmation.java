@@ -15,9 +15,9 @@ public class OrderConfirmation {
         WebElement bankName = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/strong[3]"));
         //Action
         System.out.println("Order Complete");
-        System.out.println("Amount: "+price);
-        System.out.println("Owner Name: "+ownerName);
-        System.out.println("Bank Name: "+bankName);
+        System.out.println("Amount: "+price.getText());
+        System.out.println("Owner Name: "+ownerName.getText());
+        System.out.println("Bank Name: "+bankName.getText());
     }
     public static void backToOrders(){
         //Log

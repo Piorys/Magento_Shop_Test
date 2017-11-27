@@ -14,13 +14,13 @@ public class OrderShipping {
         checkbox.click();
     }
 
-    public static String getShippingRate() {
+    public static void getShippingRate() {
         //Log
         System.out.println("Getting Shipping Rate");
         //Page elements
-        WebElement element = Main.driver.findElement(By.xpath("//*[@id=\"form\"]/div/div[2]/div[1]/div/div/table/tbody/tr/td[4]/div/text()"));
+        WebElement element = Main.driver.findElement(By.xpath("//*[@id=\"form\"]/div/div[2]/div[1]/div/div/table/tbody/tr/td[4]/div"));
         //Action
-        return "Shipping rate is " + element;
+        System.out.println("Shipping rate is " + element.getText());
     }
 
     public static void continueShopping() {

@@ -5,6 +5,7 @@
 package Execute;
 
 //Selenium packages
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,6 +17,8 @@ public class Main {
     private static String targetSite = "http://automationpractice.com"; //Site to test
     public static WebDriver driver = new ChromeDriver(); //Browser to perform
     private static String product = "Blouse"; //Product to search
+    private static String quantity = "3";
+    private static String comment = "Lorem Ipsum Dolor Sit Amet";
     //account credentials
     private static String username = "piotrryszewski@gmail.com";
     private static String password = "dupajasiu";
@@ -33,8 +36,24 @@ public class Main {
         Page.WomenCategory.getProductByName(product);
         Tests.Product.checkTittle(product);
         Page.Product.setQuantity("2");
-        Page.Product.setSize("M");
+//        Page.Product.setSize("M");
         Page.Product.addToCart();
+        Page.ProductModal.proceedToCheckout();
+//        Page.OrderSummary.setQuantity(quantity);
+        Page.OrderSummary.printOrderSummary();
+        Page.OrderSummary.proceed();
+        Page.OrderAddress.addComment(comment);
+        Page.OrderAddress.proceed();
+        Page.OrderShipping.checkTerms();
+        Page.OrderShipping.getShippingRate();
+        Page.OrderShipping.proceed();
+        Page.OrderPayment.printOrderSummary();
+        Page.OrderPayment.payByBankWire();
+        Page.OrderPaymentConfirm.summary();
+        Page.OrderPaymentConfirm.confirmOrder();
+        Tests.OrderConfirmation.checkTittle();
+        Page.OrderConfirmation.backToMain();
+        Tests.MainPage.checkTittle();
         tearDown();
     }
 

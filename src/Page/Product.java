@@ -14,6 +14,7 @@ public class Product {
         //Action
         quantityInput.sendKeys(quantity);
     }
+    //TODO - CANT FIND DESIRED SIZE
     public static void setSize(String size){
         //Log
         System.out.println("Setting size for product to: " + size);

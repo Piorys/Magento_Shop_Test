@@ -24,6 +24,7 @@ public class OrderSummary {
         continueBtn.click();
     }
 
+    // TODO - CANT FIND QUANTITY FIELD
     public static void setQuantity(String quantity) {
         //Log
         System.out.println("Setting quantity to: " + quantity);
@@ -43,11 +44,11 @@ public class OrderSummary {
         WebElement tax = Main.driver.findElement(By.id("total_tax"));
         WebElement totalWithTax = Main.driver.findElement(By.id("total_price"));
         //Action
-        System.out.println("Order summary: \n Total Products: " + products +
-                "\n Total Shipping: " + shipping +
-                "\n Total without Tax: " + totalWithoutTax +
-                "\n Tax: " + tax +
-                "\n Total with Tax: " + totalWithTax);
+        System.out.println("Order summary: \n Total Products: " + products.getText() +
+                "\n Total Shipping: " + shipping.getText() +
+                "\n Total without Tax: " + totalWithoutTax.getText() +
+                "\n Tax: " + tax.getText() +
+                "\n Total with Tax: " + totalWithTax.getText());
     }
 
 }

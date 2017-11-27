@@ -23,22 +23,22 @@ public class OrderPayment {
         //Action
         btn.click();
     }
-
+//TODO - CANT LOCATE PRICE WITHOUT TAX
     public static void printOrderSummary() {
         //Log
         System.out.println("Getting order price..");
         //Page Element
         WebElement products = Main.driver.findElement(By.id("total_product"));
         WebElement shipping = Main.driver.findElement(By.id("total_shipping"));
-        WebElement totalWithoutTax = Main.driver.findElement(By.id("total_price_without_tax"));
+//        WebElement totalWithoutTax = Main.driver.findElement(By.id("total_price_without_tax"));
         WebElement tax = Main.driver.findElement(By.id("total_tax"));
         WebElement totalWithTax = Main.driver.findElement(By.id("total_price"));
         //Action
-        System.out.println("Order summary: \n Total Products: " + products +
-                "\n Total Shipping: " + shipping +
-                "\n Total without Tax: " + totalWithoutTax +
-                "\n Tax: " + tax +
-                "\n Total with Tax: " + totalWithTax);
+        System.out.println("Order summary: \n Total Products: " + products.getText() +
+                "\n Total Shipping: " + shipping.getText() +
+//                "\n Total without Tax: " + totalWithoutTax.getText() +
+                "\n Tax: " + tax.getText() +
+                "\n Total with Tax: " + totalWithTax.getText());
     }
 
     public static void continueShopping() {
