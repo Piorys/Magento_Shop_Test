@@ -1,12 +1,11 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class WomenCategory {
-    public static void getProductByName(String product){
+    public static void getProductByName(String product) {
         //Log
         System.out.println("Getting product: " + product);
         //Page element
@@ -14,7 +13,7 @@ public class WomenCategory {
         //Action
         try {
             productBtn.click();
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Something went wrong, error trace below:");
             System.out.println(e.toString());
         }

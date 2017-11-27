@@ -1,13 +1,12 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class MainPage {
 
-    public static void goToLogin(){
+    public static void goToLogin() {
         //Log
         System.out.println("Locating and clicking login page button");
         //Page Elements
@@ -15,7 +14,8 @@ public class MainPage {
         //Action
         loginBtn.click();
     }
-    public static void search(String query){
+
+    public static void search(String query) {
         //Log
         System.out.println("Passing query: " + query);
         //Page elements
@@ -25,9 +25,10 @@ public class MainPage {
         searchBox.sendKeys(query);
         submitSearch.click();
     }
-    public static void subscribeNewsletter(String mail){
+
+    public static void subscribeNewsletter(String mail) {
         //Log
-        System.out.println("Subscribing to newsletters with mail: "+ mail);
+        System.out.println("Subscribing to newsletters with mail: " + mail);
         //Page Elements
         WebElement mailInput = Setup.driver.findElement(By.id("newsletter-input"));
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"newsletter_block_left\"]/div/form/div/button"));
@@ -38,7 +39,7 @@ public class MainPage {
 
     // Main Categories
 
-    public static void womenCategory(){
+    public static void womenCategory() {
         //Log
         System.out.println("Going to 'Women' category");
         //Page elements
@@ -46,7 +47,8 @@ public class MainPage {
         //Action
         btn.click();
     }
-    public static void dressesCategory(){
+
+    public static void dressesCategory() {
         //Log
         System.out.println("Going to 'Dresses' category");
         //Page elements
@@ -54,7 +56,8 @@ public class MainPage {
         //Action
         btn.click();
     }
-    public static void tshirtsCategory(){
+
+    public static void tshirtsCategory() {
         //Log
         System.out.println("Going to 'T-Shirts' category");
         //Page elements

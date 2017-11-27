@@ -1,16 +1,15 @@
 package Tests;
 
-import Execute.Main;
 import Execute.Setup;
 
 import static junit.framework.TestCase.assertEquals;
 
 public class OrderConfirmation {
-    public static void checkTittle(){
+    public static void checkTittle() {
         String pageTittle = Setup.driver.getTitle();
         System.out.println("Asserting page tittle");
         System.out.println("Expected: Order confirmation - My Store, found: " + pageTittle);
-        try{
+        try {
             assertEquals("Order confirmation - My Store", pageTittle);
             System.out.println("Assertion succeded");
         } catch (Exception e) {

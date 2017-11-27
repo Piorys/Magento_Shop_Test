@@ -1,8 +1,6 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
-import org.omg.CORBA.MARSHAL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -24,7 +22,8 @@ public class OrderPayment {
         //Action
         btn.click();
     }
-//TODO - CANT LOCATE PRICE WITHOUT TAX
+
+    //TODO - CANT LOCATE PRICE WITHOUT TAX
     public static void printOrderSummary() {
         //Log
         System.out.println("Getting order price..");

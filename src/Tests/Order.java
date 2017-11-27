@@ -1,6 +1,5 @@
 package Tests;
 
-import Execute.Main;
 import Execute.Setup;
 
 import static junit.framework.TestCase.assertEquals;

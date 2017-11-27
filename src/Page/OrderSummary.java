@@ -1,6 +1,5 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

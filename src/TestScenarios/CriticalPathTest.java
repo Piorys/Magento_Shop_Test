@@ -4,10 +4,10 @@ import Execute.Setup;
 import Page.MainPage;
 
 public class CriticalPathTest {
-    public static void startCriticalPathTest(){
+    public static void startCriticalPathTest() {
         Setup.setUp(Setup.targetSite);
         MainPage.goToLogin();
-        Page.LoginPage.login(Setup.username,Setup.password);
+        Page.LoginPage.login(Setup.username, Setup.password);
         Tests.LoginPage.checkTittle();
         Page.LoginPage.backToMain();
         Tests.MainPage.checkTittle();

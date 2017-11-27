@@ -1,11 +1,10 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import sun.awt.windows.WEmbeddedFrame;
-import java.util.concurrent.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class ProductModal {
     public static void proceedToCheckout() {

@@ -1,6 +1,5 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,7 +15,7 @@ public class OrderPaymentConfirm {
         continueBtn.click();
     }
 
-    public static void confirmOrder(){
+    public static void confirmOrder() {
         //Log
         System.out.println("Confirming order");
         //Page Element
@@ -25,7 +24,7 @@ public class OrderPaymentConfirm {
         btn.click();
     }
 
-    public static void printSummary(){
+    public static void printSummary() {
         //Log
         System.out.println("Getting order Summary");
         //Page Element

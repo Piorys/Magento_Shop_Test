@@ -18,14 +18,14 @@ public class Setup {
     public static String username = "piotrryszewski@gmail.com";
     public static String password = "dupajasiu";
 
-    public static void setUp(String target){
+    public static void setUp(String target) {
         System.out.println("Opening up designated page: " + targetSite);
         driver.get(target);
         System.out.println("Maximizing window");
         driver.manage().window().maximize();
     }
 
-    public static void tearDown(){
+    public static void tearDown() {
         System.out.println("Instructions ended, tearing down page");
         driver.quit();
     }

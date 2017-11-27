@@ -4,6 +4,7 @@
 package Execute;
 
 //Selenium packages
+
 import TestScenarios.CriticalPathTest;
 
 public class Main {

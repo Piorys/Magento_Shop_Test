@@ -1,13 +1,12 @@
 package Page;
 
-import Execute.Main;
 import Execute.Setup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class Product {
-    public static void setQuantity(String quantity){
+    public static void setQuantity(String quantity) {
         //Log
         System.out.println("Setting quantity for product to: " + quantity);
         //Page element
@@ -16,8 +15,9 @@ public class Product {
         quantityInput.clear();
         quantityInput.sendKeys(quantity);
     }
+
     //TODO - CANT FIND DESIRED SIZE
-    public static void setSize(String size){
+    public static void setSize(String size) {
         //Log
         System.out.println("Setting size for product to: " + size);
         //Page element
@@ -25,7 +25,8 @@ public class Product {
         //Action
         sizeDropdown.selectByValue(size);
     }
-    public static void addToCart(){
+
+    public static void addToCart() {
         //Log
         System.out.println("Adding product to cart");
         //Page element
