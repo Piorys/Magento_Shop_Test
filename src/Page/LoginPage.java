@@ -25,6 +25,7 @@ public class LoginPage {
 
     public static void backToMain(){
         WebElement logo = Main.driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
+        System.out.println("Going back to Main Page");
         logo.click();
     }
 }

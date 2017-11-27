@@ -1,6 +1,6 @@
 //Created by Piotr Rsyzewski
 //Date: 27.11.2017
-//Behavior: Script to go through critical path of magento-based web shop
+//Behavior: Script to go through critical path of presta-shop based web shop
 
 package Execute;
 
@@ -13,7 +13,7 @@ import Page.*;
 
 public class Main {
 
-    public static String targetSite = "http://automationpractice.com";
+    private static String targetSite = "http://automationpractice.com";
     public static WebDriver driver = new ChromeDriver();
     //Execute-account credentials
     private static String username = "piotrryszewski@gmail.com";
@@ -29,7 +29,6 @@ public class Main {
         Tests.MainPage.checkTittle();
         tearDown();
     }
-
 
 
     public static void setUp(String target){
