@@ -1,36 +1,27 @@
 package Page;
 
 import Execute.Main;
+import org.omg.CORBA.MARSHAL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class OrderSummary {
-
-    public static void proceed() {
-        //Page element
-        WebElement proceedBtn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]"));
+public class OrderPayment {
+    public static void payByBankWire() {
         //Log
-        System.out.println("Proceeding with checkout");
-        //Action
-        proceedBtn.click();
-    }
-
-    public static void continueShopping() {
-        //Log
-        System.out.println("Going back to shopping");
-        //Page element
-        WebElement continueBtn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[2]"));
-        //Action
-        continueBtn.click();
-    }
-
-    public static void setQuantity(String quantity) {
-        //Log
-        System.out.println("Setting quantity to: " + quantity);
+        System.out.println("Choosing Pay by bank wire option");
         //Page Element
-        WebElement qtyField = Main.driver.findElement(By.xpath("//*[@id=\"product_2_9_0_30216\"]/td[5]/input[2]"));
+        WebElement btn = Main.driver.findElement(By.xpath("//*[@id=\"HOOK_PAYMENT\"]/div[1]/div/p/a"));
         //Action
-        qtyField.sendKeys(quantity);
+        btn.click();
+    }
+
+    public static void payByCheck() {
+        //Log
+        System.out.println("Choosing Pay by check option");
+        //Page Element
+        WebElement btn = Main.driver.findElement(By.xpath("//*[@id=\"HOOK_PAYMENT\"]/div[2]/div/p/a"));
+        //Action
+        btn.click();
     }
 
     public static void printOrderSummary() {
@@ -50,4 +41,12 @@ public class OrderSummary {
                 "\n Total with Tax: " + totalWithTax);
     }
 
+    public static void continueShopping() {
+        //Log
+        System.out.println("Going back to shopping");
+        //Page element
+        WebElement continueBtn = Main.driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/p/a"));
+        //Action
+        continueBtn.click();
+    }
 }

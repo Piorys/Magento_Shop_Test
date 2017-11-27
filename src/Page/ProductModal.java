@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import sun.awt.windows.WEmbeddedFrame;
 
 public class ProductModal {
-    public static void proceedToCheckout(){
+    public static void proceedToCheckout() {
         //Log
         System.out.println("Proceeding to checkout");
         //Page elements
@@ -14,7 +14,8 @@ public class ProductModal {
         //Action
         proceedBtn.click();
     }
-    public static void continueShoppping(){
+
+    public static void continueShoppping() {
         //Log
         System.out.println("Going back to product page");
         //Page elements
