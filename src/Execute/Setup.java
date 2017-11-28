@@ -13,8 +13,8 @@ import java.util.Date;
 public class Setup {
 
     //Main Settings
-    public static String targetSite = "http://automationpractice.com";
-    public static WebDriver driver = new ChromeDriver();
+    public static String targetSite = "http://automationpractice.com"; //Site
+    public static WebDriver driver = new ChromeDriver(); //Browser
 
     //Product settings
     public static String product = "Blouse"; //Product to search
@@ -25,6 +25,7 @@ public class Setup {
     public static String username = "piotrryszewski@gmail.com";
     public static String password = "dupajasiu";
 
+    //Open up target Page
     public static void setUp(String target) {
         System.out.println("Opening up designated page: " + targetSite);
         driver.get(target);
@@ -32,11 +33,13 @@ public class Setup {
         driver.manage().window().maximize();
     }
 
+    //Close target Page
     public static void tearDown() {
         System.out.println("Instructions ended, tearing down page");
         driver.quit();
     }
 
+    //Generating Time Stamp for logs
     public static String time() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");//dd/MM/yyyy
         Date now = new Date();
@@ -44,11 +47,13 @@ public class Setup {
         return strDate + " ";
     }
 
+    //Create Log file
     public static File createLogFile(String scenarioName) {
         String filename = time() + " " + scenarioName;
         return new File( filename + ".txt");
     }
 
+    //Set Log output to Log file
     public static void setLog(String scenarioName) throws FileNotFoundException {
         File file = createLogFile(scenarioName);
         FileOutputStream fos = new FileOutputStream(file);

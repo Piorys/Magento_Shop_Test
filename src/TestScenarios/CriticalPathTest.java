@@ -2,7 +2,6 @@ package TestScenarios;
 
 import Execute.Setup;
 import Page.MainPage;
-import org.junit.Test;
 
 import java.io.FileNotFoundException;
 
