@@ -2,9 +2,17 @@ package TestScenarios;
 
 import Execute.Setup;
 import Page.MainPage;
+import org.junit.Test;
+
+import java.io.FileNotFoundException;
 
 public class CriticalPathTest {
-    public static void startCriticalPathTest() {
+
+
+    public static void startCriticalPathTest() throws FileNotFoundException {
+        String scenarioName = "Critical Path Test";
+
+        Setup.setLog(scenarioName);
         Setup.setUp(Setup.targetSite);
         MainPage.goToLogin();
         Page.LoginPage.login(Setup.username, Setup.password);

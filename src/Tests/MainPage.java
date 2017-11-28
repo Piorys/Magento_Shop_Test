@@ -1,10 +1,12 @@
 package Tests;
 
 import Execute.Setup;
+import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
 public class MainPage {
+    @Test
     public static void checkTittle() {
         String pageTittle = Setup.driver.getTitle();
         System.out.println(Setup.time() + "Asserting page tittle");
