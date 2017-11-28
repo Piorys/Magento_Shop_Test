@@ -7,13 +7,13 @@ All scripts were created using Page Object Model pattern in Java with Selenium B
 
 Project structure:
 
-Execute/
-       /Main - Class to fire up test scenarios
-       /Setup - Class to setup Target Site, Quantity, Desired Product or Comment to add.  Also it contains standard setUp and tearDown 
+- Execute/
+       -/Main - Class to fire up test scenarios
+       -/Setup - Class to setup Target Site, Quantity, Desired Product or Comment to add.  Also it contains standard setUp and tearDown 
        methods, as well as helper methods for adding timestamps and creating log file
-Page/ - Pages described in POM pattern
-Tests/ - Tests for pages, mostly for asserting Page Tittle
-Test Scenarios/ - Each class is separate test scenario.
+- Page/ - Pages described in POM pattern
+- Tests/ - Tests for pages, mostly for asserting Page Tittle
+- Test Scenarios/ - Each class is separate test scenario.
 
 
 Features:
