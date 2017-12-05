@@ -9,7 +9,7 @@ public class Product {
     @Test
     public static void checkTittle(String product) {
         String pageTittle = Setup.driver.getTitle();
-        System.out.println(Setup.time() + "Asserting page tittle");
+        System.out.println(Utils.LogCreator.time() + "Asserting page tittle");
         System.out.println("Expected: " + product + ", found: " + pageTittle);
         try {
             assertEquals(true, pageTittle.contains(product));

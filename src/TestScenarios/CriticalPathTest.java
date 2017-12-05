@@ -8,12 +8,13 @@ import java.io.FileNotFoundException;
 public class CriticalPathTest {
 
 
-    public static void startCriticalPathTest() throws FileNotFoundException {
+    public static void start() throws FileNotFoundException {
         String scenarioName = "Critical Path Test";
 
-        Setup.setLog(scenarioName);
+        Utils.LogCreator.setLog(scenarioName);
         Setup.setUp(Setup.targetSite);
         MainPage.goToLogin();
+        Utils.Screenshot.makeSS();
         Page.LoginPage.login(Setup.username, Setup.password);
         Tests.LoginPage.checkTittle();
         Page.LoginPage.backToMain();

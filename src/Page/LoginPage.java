@@ -12,18 +12,18 @@ public class LoginPage {
         WebElement passwordInput = Setup.driver.findElement(By.id("passwd"));
         WebElement signInBtn = Setup.driver.findElement(By.id("SubmitLogin"));
         //Actions
-        System.out.println(Setup.time() + "Passing username: " + username);
+        System.out.println(Utils.LogCreator.time() + "Passing username: " + username);
         loginInput.sendKeys(username);
-        System.out.println(Setup.time() + "Passing password");
+        System.out.println(Utils.LogCreator.time() + "Passing password");
         passwordInput.sendKeys(password);
-        System.out.println(Setup.time() + "Submitting credentials");
+        System.out.println(Utils.LogCreator.time() + "Submitting credentials");
         signInBtn.click();
         //Assertion
     }
 
     public static void backToMain() {
         WebElement logo = Setup.driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img"));
-        System.out.println(Setup.time() + "Going back to Main Page");
+        System.out.println(Utils.LogCreator.time() + "Going back to Main Page");
         logo.click();
     }
 }

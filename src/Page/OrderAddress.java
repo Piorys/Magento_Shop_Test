@@ -8,7 +8,7 @@ public class OrderAddress {
 
     public static void addNewAddress() {
         //Log
-        System.out.println(Setup.time() + "Proceeding to add new address");
+        System.out.println(Utils.LogCreator.time() + "Proceeding to add new address");
         //Page Elements
         WebElement btn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/div/p/a"));
         //Action
@@ -17,7 +17,7 @@ public class OrderAddress {
 
     public static void addComment(String comment) {
         //Log
-        System.out.println(Setup.time() + "Adding comment to order: " + comment);
+        System.out.println(Utils.LogCreator.time() + "Adding comment to order: " + comment);
         //Page Elements
         WebElement textArea = Setup.driver.findElement(By.xpath("//*[@id=\"ordermsg\"]/textarea"));
         //Action
@@ -26,7 +26,7 @@ public class OrderAddress {
 
     public static void continueShopping() {
         //Log
-        System.out.println(Setup.time() + "Going back to shopping");
+        System.out.println(Utils.LogCreator.time() + "Going back to shopping");
         //Page element
         WebElement continueBtn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/a"));
         //Action
@@ -37,7 +37,7 @@ public class OrderAddress {
         //Page element
         WebElement proceedBtn = Setup.driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/button"));
         //Log
-        System.out.println(Setup.time() + "Proceeding with checkout");
+        System.out.println(Utils.LogCreator.time() + "Proceeding with checkout");
         //Action
         proceedBtn.click();
     }

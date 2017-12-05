@@ -18,12 +18,16 @@ public class Setup {
 
     //Product settings
     public static String product = "Blouse"; //Product to search
-    public static String quantity = "3"; //quantity to set
+    public static String quantity = "2"; //quantity to set
     public static String comment = "Lorem Ipsum Dolor Sit Amet"; //order comment
 
-    //account credentials
+    //working account credentials
     public static String username = "piotrryszewski@gmail.com";
     public static String password = "dupajasiu";
+
+    //Bad account credentials
+    public static String badUsername = "thisdoesntwork@test.pl";
+    public static String badPassword = "Konstantynopolitanczykowna2137";
 
     //Open up target Page
     public static void setUp(String target) {
@@ -39,26 +43,6 @@ public class Setup {
         driver.quit();
     }
 
-    //Generating Time Stamp for logs
-    public static String time() {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");//dd/MM/yyyy
-        Date now = new Date();
-        String strDate = sdfDate.format(now);
-        return strDate + " ";
-    }
 
-    //Create Log file
-    public static File createLogFile(String scenarioName) {
-        String filename = time() + " " + scenarioName;
-        return new File( filename + ".txt");
-    }
-
-    //Set Log output to Log file
-    public static void setLog(String scenarioName) throws FileNotFoundException {
-        File file = createLogFile(scenarioName);
-        FileOutputStream fos = new FileOutputStream(file);
-        PrintStream ps = new PrintStream(fos);
-        System.setOut(ps);
-    }
 }
 
