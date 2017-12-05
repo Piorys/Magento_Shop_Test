@@ -14,7 +14,7 @@ Project structure:
 - Page/ - Pages described in POM pattern
 - Tests/ - Tests for pages, mostly for asserting Page Tittle
 - Test Scenarios/ - Each class is separate test scenario.
-- Utils/ - Helper classes containing classes to add timestamps for logs and creating screenshots (WIP)
+- Utils/ - Utility classes to add timestamps for logs and creating screenshots (WIP)
 
 
 Features:
