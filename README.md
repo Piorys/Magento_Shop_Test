@@ -1,4 +1,4 @@
-# Page Object Model test suite
+# Presta Shop test suite
 Test suite for Presta-Shop- based web shop using Java with Selenium
 
 Scripts were designed for Automation Practice Page (http://automationpractice.com) which is web shop based on Presta-Shop platform. 
