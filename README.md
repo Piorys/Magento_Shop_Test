@@ -10,10 +10,11 @@ Project structure:
 
 -Execute/Main - Class to fire up test scenarios
 -Execute/Setup - Class to setup Target Site, Quantity, Desired Product or Comment to add.  Also it contains standard setUp and tearDown 
-       methods, as well as helper methods for adding timestamps and creating log file
+       methods.
 - Page/ - Pages described in POM pattern
 - Tests/ - Tests for pages, mostly for asserting Page Tittle
 - Test Scenarios/ - Each class is separate test scenario.
+- Utils/ - Helper classes containing classes to add timestamps for logs and creating screenshots (WIP)
 
 
 Features:
